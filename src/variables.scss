@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+$font-family-header: 'Merriweather', serif;
+$font-family-body: 'Nunito Sans', sans-serif;
+$font-family-roboto: 'Roboto', sans-serif;
+
+$work-section-bg: #FFFFFF;
+$education-section-bg: #f3f3f3;
+$skills-section-bg: #252525;
+
+$header-color: #252525;
+$about-color: #3f3f3f;
+
+$tablet-bp: 830px;
+$mobile-medium-bp: 650px;
+$mobile-small-bp: 400px;
+
+$alternative-color: #000000;
+$alternative-color-hover: rgb(36, 36, 36);
+$alternative-color-disabled: #494949;
+
+/*$alternative-color: #FFD900; 
+$alternative-color-hover: rgb(224, 192, 10);
+$alternative-color-disabled: rgb(255, 235, 122); */
+
+//$alternative-color: rgb(55, 182, 129);
+/* $alternative-color: rgb(99, 221, 170);
+$alternative-color-hover: rgb(43, 139, 99);
+$alternative-color-disabled: rgb(169, 240, 210); */
+
+/* $alternative-color: rgb(224, 46, 105);
+$alternative-color-hover: rgb(189, 35, 86);
+$alternative-color-disabled: rgb(243, 120, 161); */

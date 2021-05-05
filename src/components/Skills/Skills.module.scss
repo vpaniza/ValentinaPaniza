@@ -1,0 +1,206 @@
+@import './../../variables.scss';
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 70%;
+    height: auto;
+    box-sizing: border-box;
+    color: #ffffff;
+    .sectionTitle{
+        align-self: flex-start;
+        margin-top: 0.5em;
+        width: 100%;
+        font-family: $font-family-body;
+        font-weight: 600;
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+    .skills{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        font-family: $font-family-body;
+        .title{
+            width: 48%;
+            font-size: 29px;
+            font-weight: 400;
+            &-soft{
+                font-size: 29px;
+                width: 100%;
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+        }
+        .scoring{
+            width: 48%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .name{
+                width: 40%;
+                color: #ffffff;
+                font-size: 16px;
+                font-weight: 600;
+                font-family: $font-family-body;
+                margin-bottom: 10px;
+            }
+            .proficiencyWrapper{
+                width: 55%;
+                min-width: 170px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                margin-bottom: 10px;
+                .filledCircle{
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    background-color: rgb(255, 249, 244);
+                    margin-right: 3px;
+                }
+                .emptyCircle{
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    background-color: transparent;
+                    border: 1px solid rgba(255, 249, 244, 0.85);
+                    margin-right: 3px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        &:last-child{
+            flex-wrap: wrap;
+        }
+        .soft{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 90%;
+            margin: 0 auto;
+            .name{
+                margin: 10px 5px 0px 5px;
+                padding: 10px 15px;
+                background-color: /* rgba(255, 217, 0, 1) !important;// */rgba(0,0,0,0.35);
+                border-radius: 8px;
+                color: #FFFFFF;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px ){
+    .wrapper{
+        width: 80%;
+    }
+}
+@media screen and (max-width: $tablet-bp ){
+    .wrapper{
+        width: 95%;
+        .sectionTitle{
+            text-align: center;
+        }
+        .skills{
+            margin-top: 25px;
+            justify-content: space-between;
+            width: 90%;
+            .title{
+                width: 35%;
+                font-size: 26px;
+                &-soft{
+                    font-size: 26px;
+                    text-align: center;
+                }
+            }
+            .scoring{
+                padding-top: 10px;
+                width: 63%;
+                align-self: flex-end;
+                .proficiencyWrapper{
+                    width: auto;
+                }
+            }
+            .soft{
+                width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                .name{
+                    margin: 10px 5px 0px 5px;
+                    padding: 8px 12px;
+                    background-color: rgba(0,0,0,0.35);
+                    border-radius: 8px;
+                    color: #FFFFFF;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-medium-bp ){
+    .wrapper{
+        width: 95%;
+        .sectionTitle{
+            text-align: center;
+        }
+        .skills{
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 90%;
+            .title{
+                width: 100%;
+                text-align: center;
+            }
+            .scoring{
+                margin: 20px auto 0 auto;
+                padding-top: 0;
+                width: 90%;
+                justify-content: space-between;
+                .name{
+                    min-width: 130px;
+                }
+                .proficiencyWrapper{
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-small-bp ){
+    .wrapper{
+        width: 95%;
+        .sectionTitle{
+            text-align: center;
+        }
+        .skills{
+            width: 95%;
+            .scoring{
+                margin: 30px auto 20px auto;
+                width: 95%;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                .name{
+                    text-align: center;
+                    margin-top: 15px;
+                }
+                .proficiencyWrapper{
+                    width: auto;
+                }
+            }
+        }
+    }
+}

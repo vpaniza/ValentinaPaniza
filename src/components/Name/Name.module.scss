@@ -1,0 +1,23 @@
+@import './../../variables.scss';
+
+.name{
+    display: inline;
+    width: auto;
+    text-align: left;
+    font-family: $font-family-roboto;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 54px;
+    color: #fff;
+    margin: 15px 0;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    background-color: #000;
+}
+
+@media screen and (max-width: $tablet-bp ){
+    .name{
+        font-size: 38px;
+        line-height: 42px;
+    }
+}

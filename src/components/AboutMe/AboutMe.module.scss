@@ -1,0 +1,91 @@
+@import './../../variables.scss';
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    width: 80%;
+    padding: 80px 0;
+    margin: 0 auto;
+    .description{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 55%;
+        padding-left: 30px;
+        .sectionTitle{
+            width: 100%;
+            text-align: left;
+            font-size: 28px;
+            line-height: 34px;
+            color: $about-color;
+            font-weight: 700;
+            font-family: $font-family-body;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .aboutMe{
+            font-family: $font-family-body;
+            text-align: left;
+            width: 100%;
+            font-size: 18px;
+            line-height: 24px;
+            color: $about-color;
+        }
+    }
+    .imgWrapper{
+        width: 39%;
+        max-width: 550px;
+        height: auto;
+        opacity: 0.7;
+        > img{
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+@media screen and (max-width: $tablet-bp ){
+    .wrapper{
+        width: 85%;
+        .description{
+            .sectionTitle{
+                font-size: 24px;
+                line-height: 30px;
+            }
+            .aboutMe{
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        .imgWrapper{
+            min-width: 210px;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-medium-bp ){
+    .wrapper{
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 40px 0;
+        .description{
+            order: 1;
+            width: 90%;
+            padding-left: 0;
+            margin-bottom: 20px;
+            .sectionTitle{
+                text-align: center;
+                padding: 12px 0;
+            }
+        }
+        .imgWrapper{
+            order: 2;
+            min-width: 220px;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+@import './../../variables.scss';
+
+.wrapper{
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    position: relative;
+    .imageWrapper{
+        width: 100%;
+        height: 750px;
+        opacity: 0.5;
+        background-image: url('./../../public/assets/morocco.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+    .contact{
+        position: absolute;
+        top: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        transform: translateY(-60%);
+        width: 80%;
+        .sectionTitle{
+            text-align: center;
+            margin: 1em 0;
+            width: 100%;
+            font-family: $font-family-body;
+            font-weight: 700;
+            font-size: 38px;
+            color: #000000;
+        }
+        .media{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            margin: 0 auto;
+            width: 220px;
+            > a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 600;
+                color: #FFFFFF;
+                font-family: $font-family-body;
+                height: 60px;
+                width: 60px;
+                border-radius: 30px;
+                background-color: $alternative-color;
+                cursor: pointer;
+                &:hover{
+                    background-color: $alternative-color-hover;
+                }
+                .icon{
+                    font-size: 22px;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-medium-bp ){
+    .wrapper{
+        .imageWrapper{
+            background-position: 30% 50%;
+        }
+    }
+}

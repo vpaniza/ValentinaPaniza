@@ -1,0 +1,116 @@
+@import './../../variables.scss';
+
+.education{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 70%; 
+    box-sizing: border-box;
+    padding-top: 20px;
+    .sectionTitle{
+        align-self: flex-start;
+        width: 30%;
+        font-family: $font-family-body;
+        font-weight: 300;
+        font-size: 29px;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+    .dataWrapper{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-self: flex-start;
+        .data{
+            margin: 15px 0;
+            &:first-child{
+                margin-top: 0;
+            }
+            .name{
+                width: 100%;
+                color: #000000;
+                font-size: 16px;
+                line-height: 19px;
+                font-family: $font-family-body;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin: 16px 0;
+                &:first-child{
+                    margin-top: 10px;
+                }
+            }
+            .description{
+                width: 100%;
+                color: #000000;
+                font-size: 16px;
+                line-height: 2em;
+                font-family: $font-family-body;
+                font-weight: 300;
+            }
+            .details{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                font-family: $font-family-body;
+                font-size: 14px;
+                line-height: 16px;
+                font-weight: 600;
+                margin: 1em 0;
+                .iconWrapper{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 12px;
+                    > p{
+                        margin-left: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $tablet-bp ){
+    .education{
+        flex-direction: column;
+        flex-wrap: wrap;
+        .sectionTitle{
+            width: 100%;
+            text-align: center;
+        }
+        .dataWrapper{
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            margin-top: 30px;
+            .description{
+                line-height: 1.5em !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-medium-bp ){
+    .education{
+        .dataWrapper{
+            width: 100%;
+            margin-top: 30px;
+            .name{
+                text-align: center;
+            }
+            .description{
+                text-align: center;
+            }
+            .details{
+                flex-direction: column !important;
+                flex-wrap: wrap !important;
+            }
+        }
+    }
+}
